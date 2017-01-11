@@ -31,7 +31,12 @@ public class Pelota : MonoBehaviour {
         transform.position = posicionInicial;
         transform.SetParent(barra);
         enJuego = false;
+        DetenerMovimiento();
+    }
+    public void DetenerMovimiento() {
+
         rig.isKinematic = true;
+        rig.velocity = Vector3.zero;
     }
 
     // Update is called once per frame
