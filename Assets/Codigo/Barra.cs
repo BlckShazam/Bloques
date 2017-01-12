@@ -11,7 +11,7 @@ public class Barra : MonoBehaviour {
        
 	
 	}
-    void Reset()
+   public void Reset()
     {
         transform.position = posicionInicial;
     }
