@@ -7,7 +7,7 @@ public class Pelota : MonoBehaviour {
 
     public Rigidbody rig;
 
-    bool enJuego = false;
+    bool enJuego;
 
     Vector3 posicionInicial;
 

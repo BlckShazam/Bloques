@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class Salir : MonoBehaviour {
+public class BotonSalir : MonoBehaviour {
 
     public bool salir;
 	
@@ -17,7 +18,7 @@ public class Salir : MonoBehaviour {
             }
             else
             {
-                Application.LoadLevel("Portada");
+                SceneManager.LoadScene("Portada");
             }
         }
 	}

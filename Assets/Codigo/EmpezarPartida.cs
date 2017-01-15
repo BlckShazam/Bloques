@@ -9,7 +9,8 @@ public class EmpezarPartida : MonoBehaviour {
 	void Update () {
 
         if (Input.GetButtonDown("Fire1")) {
-
+            Vidas.vidas = 3;
+            Puntos.puntos = 0;
             SceneManager.LoadScene("Nivel01");
       }
 
