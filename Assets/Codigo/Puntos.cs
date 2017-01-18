@@ -18,6 +18,8 @@ public class Puntos : MonoBehaviour {
 
 	public Transform contenedorBloques;
 
+    public SonidosFinPartida sonidosFinPartida;
+
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +42,8 @@ public class Puntos : MonoBehaviour {
 		if (contenedorBloques.childCount <= 0) {
 			pelota.DetenerMovimiento();
 			barra.enabled = false;
+            
+
 			if (siguienteNivel.EsUltimoNivel ()) {
 			
 				juegoCompletado.SetActive (true);
@@ -48,7 +52,9 @@ public class Puntos : MonoBehaviour {
 				nivelCompletado.SetActive (true);
 			}
 
-			siguienteNivel.ActivarCarga();
+            sonidosFinPartida.NivelCompletado();
+
+            siguienteNivel.ActivarCarga();
 		}
 	} 
 

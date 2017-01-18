@@ -12,6 +12,8 @@ public class Vidas : MonoBehaviour {
     public GameObject gameOver;
     public SiguienteNivel siguienteNivel;
 
+    public SonidosFinPartida sonidosFinPartida;
+
 	// Use this for initialization
 	void Start () {
 
@@ -31,6 +33,7 @@ public class Vidas : MonoBehaviour {
         ActualizarMarcadorVidas();
 
         if(vidas <= 0){
+            sonidosFinPartida.GameOver();
             //Mostramos GameOver
             gameOver.SetActive(true);
             pelota.DetenerMovimiento();
