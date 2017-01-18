@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bbd956e2530d0bc4a9d84c2733eb4a20
+timeCreated: 1484740116
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Karate
+  fontNames:
+  - Karate
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 52ec070df10cd3447bb5a817177ffd44, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
