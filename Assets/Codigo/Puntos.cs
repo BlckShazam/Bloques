@@ -35,9 +35,20 @@ public class Puntos : MonoBehaviour {
         Puntos.puntos++;
         ActualizarMarcadorPuntos();
 
+
+		//Detectamos la cantidad de hijos que tiene el transform
 		if (contenedorBloques.childCount <= 0) {
 			pelota.DetenerMovimiento();
 			barra.enabled = false;
+			if (siguienteNivel.EsUltimoNivel ()) {
+			
+				juegoCompletado.SetActive (true);
+			} else {
+			
+				nivelCompletado.SetActive (true);
+			}
+
+			siguienteNivel.ActivarCarga();
 		}
 	} 
 
