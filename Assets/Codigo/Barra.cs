@@ -23,17 +23,25 @@ public class Barra : MonoBehaviour {
     void Update () {
 
         float direccion;
+
         if (botonIzquierda.pulsado)
         {
             direccion = -1;
         }
         else if (botonDerecha.pulsado) {
-            direccion = 1
+            direccion = 1;
         }
         else {
-            direccion = Input.GetAxisRaw("Horizontal");
+            direccion = Input.GetAxisRaw("Horizontal"); //GetAxisRaw mira si estamos pulsando hacia derecha o izquierda con valores de +1 o -1;
         }
         
+
+
+        /*Otra forma seria:
+         * 
+         * float direccion = botonIzquierda.pulsado ? -1: (botonDerecha.Pulsado ? 1 : InputGetAxisRaw("Horizontal"))
+         * 
+         * */
         float posX = transform.position.x + (direccion * velocidad * Time.deltaTime); // Time.deltaTime calcula el tiempo en funcion de los fotogramas para ajustar la velocidad
         transform.position = new Vector3(Mathf.Clamp(posX, -8, 8), transform.position.y, transform.position.z); // Clamp define los maximos y minimos que puede tener un vector, 1� el valor actual, minimo y maximo.
         
